@@ -1,7 +1,7 @@
 
 
 import time
-print("\nWelcome to fun play game\n")
+print("\n Welcome to the play game\n")
 time.sleep(0.5)
 name = input("Enter your name: ")
 time.sleep(0.5)
@@ -10,11 +10,11 @@ time.sleep(0.5)
 games_opt = print("Number Guessing Game[1]\n\nHangman[2]\n\nRock,Paper and Scissor[3]\n") # choose a game
 game_num = int(input("Enter A Game number"))  # game name
 time.sleep(0.5)
-print("Hello " + name + "! Best of Luck!\n")
+print("Hello " + name + "! All the Best!\n")
 if game_num == 1:
     input1 = print(input("Press Enter Button To Start A Game")) # enter for start
-    print(" You Have 10 Chances")  # number of chances
-    chance = 10
+    print(" You Have 5 Chances")  # number of chances
+    chance = 5
     count = 0
     import random
     winning_num = random.randint(0, 100)  # wining number
@@ -24,16 +24,16 @@ if game_num == 1:
         for i in range(1, chance + 1):
             count = count + 1
             if winning_num == num_guess:
-                print(f"CONGO!YOU WIN\nyou guessed number in {count} times")
+                print(f"COnGRATULATIONS!YOU WON\n You guessed number in {count} times")
                 game_over = True
                 break
             elif num_guess < winning_num:
-                print("you guessed the low value")
+                print("You guessed the LOW VALUE")
                 print("==========================")
                 num_guess = int(input("Guess Again"))
                 break
             elif num_guess > winning_num:
-                print("you guessed the high")
+                print("y\You guessed the HIGH")
                 print("===========================")
                 num_guess = int(input("Guess Again"))
                 break
@@ -86,7 +86,7 @@ elif game_num == 3:
     elif comp_count == user_count:
         print("IT'S A TIE!!")
     else:
-            print("CONGRATS!! YOU WIN THE GAME")
+            print("CONGRATULATIONS!! YOU WIN THE GAME")
 else:
     import random
     from hangman import hangman_parts
@@ -97,11 +97,11 @@ else:
     print("CHOOSE A GENER: ")
     print("===============================")
     options = print("COUNTRIES NAME[1]\n\nMOVIES[2]\n\nFOOD NAMES[3]\n\nFLOWER NAME[4]")
-    choice =int(input("enter a option: "))
+    choice =int(input("Enter a option: "))
     if choice == 1:
-        words = ['afghanistan', 'antarctica', 'argentina', 'australia', 'austria','bahamas',
-              'belgium', 'belize', 'canada', 'chile', 'china', 'india', 'japan', 'america', 'southkorea',
-               'france', 'poland', 'russia''']
+        words = ['Afghanistan', 'Antarctica', 'Argentina', 'Australia', 'Austria','Bahamas',
+              'Belgium', 'Belize', 'Canada', 'Chile', 'China', 'India', 'Japan', 'America', 'South Korea',
+               'France', 'Poland', 'Russia''']
         word = random.choice(words)
 
         total_chances = 7
@@ -109,20 +109,20 @@ else:
         while total_chances !=0:
             print("WORD: ", guessed_word)
             print("===========================")
-            letter = input("guess a letter: ").lower()
+            letter = input("Guess a letter: ").lower()
             if letter in word:
                 for index in range(len(word)):
                     if word[index] == letter:
                         guessed_word = guessed_word[:index]+letter+guessed_word[index+1:]
 
                 if guessed_word == word :
-                    print("congratulations you won!!!")
+                    print("CONGRATULATIONS YOU WON!!!")
                     print(f"THE WORD IS: {word}")
                     break
             else:
                 total_chances -= 1
-                print("Incorrect guess")
-                print("the remaining chances are: ",total_chances)
+                print("Incorrect Guess")
+                print("The remaining chances are: ",total_chances)
                 from hangman import hangman_parts
                 hangman_parts(total_chances)
         else:
@@ -132,9 +132,9 @@ else:
             print("The Correct Word Is:",word)
 
     elif choice == 2:
-        words = ['shershaah','URI','dhoom','3idiots','sultan','dear zindagi','goodbye',
-                 'bhoolbhulaiya','players','dangal','partner','drishyam','bodygaurd',
-                 'kesari','chhichhore','razi','piku','hindimedium','englishmedium']
+        words = ['Shershaah','URI','Dhoom','3 Idiots','Sultan','Dear Zindagi','Goodbye',
+                 'Bhool Bhulaiya','Players','Dangal','Partner','Drishyam','Bodygaurd',
+                 'Kesari','Chhichhore','Razi','Piku','Hindi Medium','English Medium']
         word = random.choice(words)
 
         total_chances = 7
@@ -142,14 +142,14 @@ else:
         while total_chances !=0:
             print("WORD: ", guessed_word)
             print("==============================")
-            letter = input("guess a letter: ").lower()
+            letter = input("Guess a Letter: ").lower()
             if letter in word:
                 for index in range(len(word)):
                     if word[index] == letter:
                         guessed_word = guessed_word[:index]+letter+guessed_word[index+1:]
 
                 if guessed_word == word :
-                    print("congratulations you won!!!")
+                    print("Congratulations you won!!!")
                     print(f"THE WORD IS: {word}")
                     break
             else:
@@ -165,8 +165,8 @@ else:
             print("The Correct Word Is:",word)
 
     elif choice == 3:
-        words = ['sandwich','bread','steak','rice','spaghetti','pizza','hamburger','eggs','cheese'
-                 'sausages','apple','juice','milk','candy','cookie','pie','cake','cupcake']
+        words = ['Sandwich','Bread','Steak','Rice','Spaghetti','Pizza','Hamburger','Eggs','Cheese'
+                 'Sausages','Apple','Juice','Milk','Candy','Cookie','Pie','Cake','Cupcake']
         word = random.choice(words)
 
         total_chances = 7
@@ -197,8 +197,8 @@ else:
             print("All The Chances Are Exhausted")
             print("The Correct Word Is:", word)
     else:
-        words = ['rose','lotus','jasmine','sunflower','daisy','tupil','lavender',
-                 'hibiscus','balsam','goldenshower','aleovera','lily','cherryblosom',]
+        words = ['Rose','Lotus','Jasmine','Sunflower','Daisy','Tupil','Lavender',
+                 'Hibiscus','Balsam','Goldenshower','Aloevera','Lily','Cherryblosom',]
         word = random.choice(words)
 
         total_chances = 7
@@ -213,7 +213,7 @@ else:
                         guessed_word = guessed_word[:index]+letter+guessed_word[index+1:]
 
                 if guessed_word == word:
-                    print("congratulations you won!!!")
+                    print("Congratulations You Won!!!")
                     print(f"THE WORD IS: {word}")
                     break
             else:
